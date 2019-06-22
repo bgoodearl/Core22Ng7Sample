@@ -42,3 +42,53 @@ Choose Angular and click `Create`.
 
 Now build and run the application.
 
+## Update Angular 6 to 7
+
+### Node and npm
+
+Updated Node to `10.16.0` with [Windows install download](https://nodejs.org/en/download/)
+from nodejs.org
+
+Updated npm to `6.9.0` with [npm-windows-upgrade](https://www.npmjs.com/package/npm-windows-upgrade)
+using PowerShell as admin.  (See notes on package page)
+
+### Angular CLI
+
+Uninstalled `@angular/cli` and installed version 7.3.8 (latest V7 release)
+```cmd
+npm uninstall -g angular-cli
+npm cache verify (because npm > 5)
+npm install -g @angular/cli@7.3.8
+```
+caused update of `@angular/cli` in `package.json`.
+
+### Angular core
+
+```cmd
+ng update
+```
+got
+```cmd
+    We analyzed your package.json, there are some packages to update:
+
+      Name                                      Version                  Command to update
+     ---------------------------------------------------------------------------------------
+      @angular/cli                              7.3.8 -> 8.0.3           ng update @angular/cli
+      @angular/core                             6.0.5 -> 8.0.2           ng update @angular/core
+      @angular/core                             6.1.10 -> 7.2.15         ng update @angular/core
+      @nguniversal/aspnetcore-engine            6.0.0 -> 7.1.1           ng update @nguniversal/aspnetcore-engine
+      rxjs                                      6.2.1 -> 6.5.2           ng update rxjs
+
+
+    There might be additional packages that are outdated.
+    Run "ng update --all" to try to update all at the same time.
+```
+
+Ran update of CLI:
+```cmd
+ng update @angular/cli@7.3.8
+```
+Caused no additional changes in `package.json`, but some changes
+in `package-lock.json`.
+
+
