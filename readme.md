@@ -138,3 +138,8 @@ got
 ```
 
 Compiled and ran and app runs successfully.
+
+results of npm install before build included notification of vulnerabilities.
+
+See document on [npm audit](./_docs/npm_audit.md)
+
