@@ -91,4 +91,50 @@ ng update @angular/cli@7.3.8
 Caused no additional changes in `package.json`, but some changes
 in `package-lock.json`.
 
+```cmd
+ng update @angular/core@7.0.0
+```
+updated multiple packages in `package.json`.
 
+```cmd
+ng update
+```
+got
+```cmd
+    We analyzed your package.json, there are some packages to update:
+
+      Name                                      Version                  Command to update
+     ---------------------------------------------------------------------------------------
+      @angular/cli                              7.3.8 -> 8.0.3           ng update @angular/cli
+      @angular/core                             7.2.15 -> 8.0.2          ng update @angular/core
+      @angular/core                             7.0.0 -> 7.2.15          ng update @angular/core
+      @nguniversal/aspnetcore-engine            6.0.0 -> 7.1.1           ng update @nguniversal/aspnetcore-engine
+
+
+    There might be additional packages that are outdated.
+    Run "ng update --all" to try to update all at the same time.
+```
+
+```cmd
+ng update @angular/core@7.2.15
+```
+made additional changes in in `package.json`.
+```cmd
+ng update
+```
+got
+```cmd
+    We analyzed your package.json, there are some packages to update:
+
+      Name                                      Version                  Command to update
+     ---------------------------------------------------------------------------------------
+      @angular/cli                              7.3.8 -> 8.0.3           ng update @angular/cli
+      @angular/core                             7.2.15 -> 8.0.2          ng update @angular/core
+      @nguniversal/aspnetcore-engine            6.0.0 -> 7.1.1           ng update @nguniversal/aspnetcore-engine
+
+
+    There might be additional packages that are outdated.
+    Run "ng update --all" to try to update all at the same time.
+```
+
+Compiled and ran and app runs successfully.
