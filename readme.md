@@ -32,3 +32,13 @@ Click on "Create a new project", or if the above dialog was dismissed,  choose F
 
 Filter by Project type `Web` and then click on `ASP.Net Core Web Application` and click `Next`.
 
+![VS 2019 Configure new project](img/04_VS2019_ConfigProject.png)
+
+Set the Project name, Location and Solution name and click `Create`.
+
+![VS 2019 Create new ASP.NET Core Web App](img/05_VS2019_CreateWebApp.png)
+
+Choose Angular and click `Create`.
+
+Now build and run the application.
+
