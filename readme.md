@@ -1,5 +1,7 @@
 # Angular 7 Web App with .NET Core Web API and AAD Auth with MSAL
 
+This repo contains a sample application created with Visual Studio 2019 using .NET Core 2.2 and Angular 7.
+
 ## Environment
 
 Quick information on environment.
@@ -143,3 +145,16 @@ results of npm install before build included notification of vulnerabilities.
 
 See document on [npm audit](./_docs/npm_audit.md)
 
+## Resources
+
+See the following pages for additional resources
+
+[Developer Tool Notes](./_docs/CNS_DevToolNotes.md)
+
+[Azure Active Directory Resources](./_docs/AzureADResources.md)
+
+Additional resources: [Resources](./_docs/CNS_Resources.md)
+
+## Dev Notes
+
+[Developer Notes](./_docs/CoreSampleDevNotes.md)
