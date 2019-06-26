@@ -7,6 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreApiSample", "CoreApiSam
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_docs", "_docs", "{90F57DDE-99E2-4008-B71E-AE270E330D79}"
 	ProjectSection(SolutionItems) = preProject
+		_docs\AzureADResources.md = _docs\AzureADResources.md
+		_docs\CNS_DevToolNotes.md = _docs\CNS_DevToolNotes.md
+		_docs\CNS_Resources.md = _docs\CNS_Resources.md
 		_docs\CoreSampleDevNotes.md = _docs\CoreSampleDevNotes.md
 		_docs\npm_audit.md = _docs\npm_audit.md
 		readme.md = readme.md
