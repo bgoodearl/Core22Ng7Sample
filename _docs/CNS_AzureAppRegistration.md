@@ -36,3 +36,10 @@ As a first step you'll need to:
      the [Implicit grant flow](https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-implicit-grant-flow) to be enabled to
      sign-in the user.
 1. Select **Save**.
+
+#### Add Microsoft Graph User.Read - Admin permission grant
+
+Start by going to API permissions for the Azure AD application defined above.
+
+1. Click on `User.Read` under `Microsoft Graph`
+1. Click on `Grant admin consent for (your domain)`
