@@ -1,8 +1,11 @@
-# Register the application
+# Register the application for your Azure Active Directory
 
-(adapted from [An ASP.NET Core Web app signing-in users with the Microsoft identity platform in your organization](https://github.com/Azure-Samples/active-directory-aspnetcore-webapp-openidconnect-v2/tree/master/1-WebApp-OIDC/1-1-MyOrg))
-and [Using the Microsoft identity platform to call the Microsoft Graph API from an An ASP.NET Core 2.x Web App, on behalf of a user signing-in using their work and school or Microsoft personal account](https://github.com/Azure-Samples/active-directory-aspnetcore-webapp-openidconnect-v2/tree/master/2-WebApp-graph-user/2-1-Call-MSGraph)
+adapted from the following samples:
+- [An ASP.NET Core Web app signing-in users with the Microsoft identity platform in your organization](https://github.com/Azure-Samples/active-directory-aspnetcore-webapp-openidconnect-v2/tree/master/1-WebApp-OIDC/1-1-MyOrg))
+- [Using the Microsoft identity platform to call the Microsoft Graph API from an An ASP.NET Core 2.x Web App, on behalf of a user signing-in using their work and school or Microsoft personal account](https://github.com/Azure-Samples/active-directory-aspnetcore-webapp-openidconnect-v2/tree/master/2-WebApp-graph-user/2-1-Call-MSGraph)
+- [Calling a web API in an ASP.NET Core web application using Azure AD](https://github.com/Azure-Samples/active-directory-dotnet-webapp-webapi-openidconnect-aspnetcore)
 
+### Azure AD single tenant
 For other options, See the list of projects under [WebApp-OIDC](https://github.com/Azure-Samples/active-directory-aspnetcore-webapp-openidconnect-v2/tree/master/1-WebApp-OIDC)
 
 #### Choose the Azure AD tenant where you want to create your applications
@@ -18,8 +21,10 @@ As a first step you'll need to:
 1. Navigate to the Microsoft identity platform for developers [App registrations](https://go.microsoft.com/fwlink/?linkid=2083908) page.
 1. Select **New registration**.
 1. When the **Register an application page** appears, enter your application's registration information:
-   - In the **Name** section, enter a meaningful application name that will be displayed to users of the app, for example `WebApp`.
+   - In the **Name** section, enter a meaningful application name that will be displayed to users of the app, for example `Core22Ng7Sample_dev`.
    - In the **Supported account types** section, select **Accounts in this organizational directory only ({tenant name})**.
+     > In the case of the app from which this explanation was drawn there was more than one redirect URI.  In this case, there is only one, but it can still be done in the order described.
+
      > Note that there are more than one redirect URIs. You'll need to add them from the **Authentication** tab later after the app has been created succesfully.
 1. Select **Register** to create the application.
 1. On the app **Overview** page, find the **Application (client) ID** value and record it for later. You'll need it to configure the Visual Studio configuration file for this project.
@@ -31,12 +36,3 @@ As a first step you'll need to:
      the [Implicit grant flow](https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-implicit-grant-flow) to be enabled to
      sign-in the user.
 1. Select **Save**.
-
-1. From the **Certificates & secrets** page, for your app registration, in the **Client secrets** section, choose **New client secret**:
-
-   - Type a key description (of instance `app secret`),
-   - Select a key duration of either **In 1 year**, **In 2 years**, or **Never Expires**.
-   - When you press the **Add** button, the key value will be displayed, copy, and save the value in a safe location.
-   - You'll need this key later to configure the project in Visual Studio. This key value will not be displayed again, nor retrievable by any other means.
-1. In the list of pages for the app, select **API permissions**, and notice that a delegated permission is set by default to Microsoft Graph for the scope **User.Read**
-
